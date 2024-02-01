@@ -6,7 +6,6 @@ import jakarta.persistence.Embeddable;
 public class BaseEntity {
     Long createat;
     Long updateat;
-    int state;
 
     public Long getCreateat() {
         return createat;
@@ -24,11 +23,4 @@ public class BaseEntity {
         this.updateat = updateat;
     }
 
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
 }

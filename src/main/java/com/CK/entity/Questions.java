@@ -14,13 +14,14 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "tbl_competition")
+@Table(name = "tbl_questions")
 public class Questions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    int sure; // dogru cevaplayan kişi ne kadar sürede cevapladı
     @ManyToOne
-    @JoinColumn(name = "characteristics_id") // Adjust the column name based on your schema
+    @JoinColumn(name = "characteristics_id") // soruyu dogru cevaplayan kişi
     Characteristics characteristics;
     @ElementCollection
     @CollectionTable(name = "competitor_answers", joinColumns = @JoinColumn(name = "question_id"))

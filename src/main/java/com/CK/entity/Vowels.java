@@ -19,10 +19,8 @@ public class Vowels {
     Long id;
     @Column(name = "full_name", nullable = false)
     String fullName;
+    @Column(name = "image_url", nullable = false)
     String imageUrl;
-    @Enumerated(EnumType.STRING)
-    Gender gender;
-    int age;
     @Embedded
     BaseEntity baseEntity;
     @OneToOne(mappedBy = "vowels", cascade = CascadeType.ALL)
